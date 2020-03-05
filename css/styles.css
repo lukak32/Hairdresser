@@ -1,5 +1,5 @@
 .wrapper{
-    width: 1920px;
+    max-width: 1920px;
     margin: auto;
 }
 .header{
@@ -9,49 +9,67 @@
     width: 100%;
     height: 907px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .header__navigation{}
 .header__button{
 }
 .header__title{
     text-align: center;
-    margin-top: 242px;
+    margin-top: 238px;
 }
 .navigation{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding-top: 29px;
+    width: 100%;
 }
 .navigation__logo{
-    padding-left: 9.5%;
+    padding-left: 17.3%;
 }
 .navigation__list{
-    padding-right: 5px;
 }
 .navigation__phone{
-    padding-right: 10.1%;
+    padding-left: 8%;
 }
-.logo{}
+.logo{
+    width: 33.33%;
+    box-sizing: border-box;
+}
 .nav-list{
-    width: 640px;
+    width: 33.33%;
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 .nav-list__li{}
-.phone{}
+.nav-list__li:hover{
+    border-bottom: 2px solid #C69461
+}
+.phone{
+    width: 33.33%;
+    box-sizing: border-box;
+}
+.phone:hover{
+    font-weight: bold;
+}
 .title{
-    font-family: Philosopher;
+    font-family: Philosopher, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 80px;
     line-height: 87px;
 }
 .button{
-    position: absolute;
-    width: 14.9%;
+    position: relative;
+    width: 282.8px;
     height: 74.16px;
-    left: 42.6%;
-    top: 566px;
+    top: 100px;
     background: linear-gradient(181.17deg, #D19D6A 3.39%, #876430 96.19%);
     border-radius: 70.3363px;
+}
+.button:active{
+    background: linear-gradient(173.17deg, #876430 96.19%, #D19D6A 3.39%);
 }
