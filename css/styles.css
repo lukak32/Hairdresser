@@ -1,0 +1,57 @@
+.wrapper{
+    width: 1920px;
+    margin: auto;
+}
+.header{
+    background-image: url("../images/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 907px;
+    position: relative;
+}
+.header__navigation{}
+.header__button{
+}
+.header__title{
+    text-align: center;
+    margin-top: 242px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 29px;
+}
+.navigation__logo{
+    padding-left: 9.5%;
+}
+.navigation__list{
+    padding-right: 5px;
+}
+.navigation__phone{
+    padding-right: 10.1%;
+}
+.logo{}
+.nav-list{
+    width: 640px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list__li{}
+.phone{}
+.title{
+    font-family: Philosopher;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 87px;
+}
+.button{
+    position: absolute;
+    width: 14.9%;
+    height: 74.16px;
+    left: 42.6%;
+    top: 566px;
+    background: linear-gradient(181.17deg, #D19D6A 3.39%, #876430 96.19%);
+    border-radius: 70.3363px;
+}
