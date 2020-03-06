@@ -1,4 +1,4 @@
-.wrapper{
+.page{
     max-width: 1920px;
     margin: auto;
 }
@@ -18,16 +18,18 @@
 }
 .header__title{
     text-align: center;
-    margin-top: 238px;
+    margin-top: 214px;
 }
 .navigation{
     display: flex;
     justify-content: space-between;
-    padding-top: 29px;
+    padding-top: 30px;
     width: 100%;
 }
 .navigation__logo{
     padding-left: 17.3%;
+    position: relative;
+    top: -18px;
 }
 .navigation__list{
 }
@@ -72,4 +74,96 @@
 }
 .button:active{
     background: linear-gradient(173.17deg, #876430 96.19%, #D19D6A 3.39%);
+}
+
+.main{}
+.about{
+    height: 820px;
+    position: relative;
+}
+.about__title{
+    font-family: Philosopher, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 45px;
+    color: #CD9966;
+    position: absolute;
+    top: 166px;
+    left: 17.6%;
+}
+.about__text{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 163.19%;
+    color: #161616;
+    position: absolute;
+    top: 242px;
+    left: 17.5%;
+    width: 29%;
+}
+.about__scissors{position: absolute;top: 433px;left: 6%;}
+.about__attributes{
+    position: absolute;
+    top: 514px;
+    left: 17.6%;
+}
+.attributes{
+    display: flex;
+}
+.attributes__attribute{
+    display: flex;
+    width: 185px;
+    left: 17.6%;
+    margin-right: 1px;
+}
+.attributes__attribute:nth-child(2){
+    width: 297px;
+}
+.attributes__number{
+    font-family: Philosopher, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 67px;
+    color: #CD9966;
+}
+.attributes__letter{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 26px;
+    color: #161616;
+    padding-left: 14px;
+    padding-top: 8px;
+}
+.about__anna-bg{}
+.about__anna{
+    position: absolute;
+    right: 19.4%;
+    top: 177px;
+    -webkit-box-shadow: 35px -49px 0 2px #D5A87B;
+    -moz-box-shadow: 35px -49px 0 2px #D5A87B;
+    box-shadow: 35px -49px 0 2px #D5A87B;
+}
+
+.service{
+    padding-right: 21px;
+    position: relative;
+}
+.service__img{
+    margin: 90px auto;
+    display: block;
+    transform: scale(1.2);
+}
+.portfolio{
+    display: block;
+    position: relative;
+}
+.portfolio__img{
+    position: absolute;
+    left: 313px;
+    top: 44px;
+    transform: scale(1.1);
 }
