@@ -14,11 +14,15 @@
     align-items: center;
 }
 .header__navigation{}
-.header__button{
-}
+.header__button{position: relative;top: 94px;}
 .header__title{
     text-align: center;
-    margin-top: 214px;
+    margin-top: 211px;
+    font-family: Philosopher, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 90px;
+    color: #EEEEEE;
 }
 .navigation{
     display: flex;
@@ -57,56 +61,56 @@
 .phone:hover{
     font-weight: bold;
 }
-.title{
-    font-family: Philosopher, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 80px;
-    line-height: 87px;
-}
 .button{
-    position: relative;
     width: 282.8px;
     height: 74.16px;
-    top: 100px;
     background: linear-gradient(181.17deg, #D19D6A 3.39%, #876430 96.19%);
     border-radius: 70.3363px;
+    display: block;
 }
 .button:active{
     background: linear-gradient(173.17deg, #876430 96.19%, #D19D6A 3.39%);
 }
 
 .main{
-    margin: auto;
+    margin: 0 auto;
     width: 1246px;
 }
-.about{
-    height: 820px;
-    position: relative;
-}
-.about__title{
+.title{
     font-family: Philosopher, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 45px;
     color: #CD9966;
-    margin-top: 167px;
+    display: block;
+    font-size: 48px;
+    line-height: 54px;
 }
-.about__text{
-    font-style: normal;
+
+.text{
     font-weight: 300;
     font-size: 22px;
     line-height: 168%;
     color: #161616;
     width: 44%;
     display: block;
-    margin-top: 31px;
 }
-.about__scissors{margin-left: -17.7%;margin-top: 9px;}
+.text_size_30px{
+    font-size: 30px;
+    line-height: 35px;
+    color: #050505;
+}
+.about{
+    height: 703px;
+    width: 100%;
+    position: relative;
+    padding-top: 125px;
+    box-sizing: border-box;
+}
+.about__title{position: relative;top: 42px;width: fit-content;}
+.about__title_small{font-size: 40px;line-height: 45px;}
+.about__text{position: relative;top: 73px;}
+.about__scissors{margin-left: -17.7%;position: relative;top: 84px;}
 .about__attributes{
-    position: absolute;
-    top: 347px;
+    position: relative;
+    top: -131px;
 }
 .attributes{
     display: flex;
@@ -122,15 +126,12 @@
 }
 .attributes__number{
     font-family: Philosopher, sans-serif;
-    font-style: normal;
     font-weight: bold;
     font-size: 60px;
     line-height: 67px;
     color: #CD9966;
 }
 .attributes__letter{
-    font-style: normal;
-    font-weight: normal;
     font-size: 25px;
     line-height: 26px;
     color: #161616;
@@ -140,22 +141,107 @@
 .about__anna-bg{}
 .about__anna{
     position: absolute;
-    top: 9px;
-    -webkit-box-shadow: 35px -49px 0 2px #D5A87B;
-    -moz-box-shadow: 35px -49px 0 2px #D5A87B;
-    box-shadow: 35px -49px 0 2px #D5A87B;
-    right: 2.9%;
+    top: 176px;
+    -webkit-box-shadow: 34px -48px 0 2px #D5A87B;
+    -moz-box-shadow: 34px -48px 0 2px #D5A87B;
+    box-shadow: 34px -48px 0 2px #D5A87B;
+    right: 2.8%;
 }
 
 .service{
-    padding-right: 21px;
+    height: 1106px;
+    width: 100%;
+    position: relative;
+    padding-top: 125px;
+    box-sizing: border-box;
+}
+.service__title{
+    text-align: center;
     position: relative;
 }
-.service__img{
-    margin: 90px auto;
-    display: block;
-    transform: scale(1.2);
+.service__text{
+    width: fit-content;
+    margin: 20px auto;
 }
+.service__background{
+    display: block;
+    width: 65.1%;
+    height: 714px;
+    margin: 57px auto;
+    position: relative;
+}
+.service__image{
+    display: block;
+    position: absolute;
+    left: 16.7%;
+    top: 338px;
+}
+.service__image_margin{
+    margin-left: 4.3%;
+    margin-top: -46px;
+}
+.service__button{
+    position: relative;
+    top: 780px;
+    margin: auto;
+}
+.services{position: absolute;}
+.services_item1{
+    top: 310px;
+    left: 16%;
+}
+.services_item2{
+    top: 540px;
+    left: 5%;
+}
+.services_item3{
+    top: 846px;
+    left: 12.5%;
+}
+.services_item4{top: 310px;right: 10.8%;}
+.services_item5{
+    top: 546px;
+    right: 7.6%;
+}
+.services_item6{
+    top: 846px;
+    right: 18.3%;
+}
+.services__title{
+    font-size: 25px;
+    line-height: 29px;
+    color: #2B2B2B;
+}
+.services__price{
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 22px;
+    color: #2B2B2B;
+    padding-top: 3px;
+}
+.services__price_padding1{
+    text-align: end;
+    padding-right: 15px;
+}
+.services__price_padding2{
+    text-align: end;
+    padding-right: 48px;
+}
+.services__price_padding3{
+    text-align: end;
+    padding-right: 15px;
+}
+.services__price_padding4{
+    padding-left: 21px;
+}
+.services__price_padding5{
+    padding-left: 18px;
+}
+.services__price_padding6{
+    padding-left: 17px;
+}
+
+
 .portfolio{
     display: block;
     position: relative;
