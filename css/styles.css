@@ -76,7 +76,10 @@
     background: linear-gradient(173.17deg, #876430 96.19%, #D19D6A 3.39%);
 }
 
-.main{}
+.main{
+    margin: auto;
+    width: 1246px;
+}
 .about{
     height: 820px;
     position: relative;
@@ -88,26 +91,22 @@
     font-size: 40px;
     line-height: 45px;
     color: #CD9966;
-    position: absolute;
-    top: 166px;
-    left: 17.6%;
+    margin-top: 167px;
 }
 .about__text{
     font-style: normal;
     font-weight: 300;
     font-size: 22px;
-    line-height: 163.19%;
+    line-height: 168%;
     color: #161616;
-    position: absolute;
-    top: 242px;
-    left: 17.5%;
-    width: 29%;
+    width: 44%;
+    display: block;
+    margin-top: 31px;
 }
-.about__scissors{position: absolute;top: 433px;left: 6%;}
+.about__scissors{margin-left: -17.7%;margin-top: 9px;}
 .about__attributes{
     position: absolute;
-    top: 514px;
-    left: 17.6%;
+    top: 347px;
 }
 .attributes{
     display: flex;
@@ -141,11 +140,11 @@
 .about__anna-bg{}
 .about__anna{
     position: absolute;
-    right: 19.4%;
-    top: 177px;
+    top: 9px;
     -webkit-box-shadow: 35px -49px 0 2px #D5A87B;
     -moz-box-shadow: 35px -49px 0 2px #D5A87B;
     box-shadow: 35px -49px 0 2px #D5A87B;
+    right: 2.9%;
 }
 
 .service{
