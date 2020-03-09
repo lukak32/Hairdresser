@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hairdresser</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script src="js/map.js"></script>
 </head>
 <body class="page">
-    <header class="header">
+    <header id="header" class="header">
         <nav class="navigation header__navigation">
             <a class="logo navigation__logo"><svg width="157" height="45" viewBox="0 0 157 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="157" height="45" fill="url(#pattern0)"/>
@@ -24,7 +27,7 @@
                 <li><a class="nav-list__li" href="#about">Обо мне</a></li>
                 <li><a class="nav-list__li" href="#service">Услуги</a></li>
                 <li><a class="nav-list__li" href="#portfolio">Портфолио</a></li>
-                <li><a class="nav-list__li" href="#video">Видео</a></li>
+                <li><a class="nav-list__li" href="#videos">Видео</a></li>
                 <li><a class="nav-list__li" href="#contact">Контакты</a></li>
             </ul>
             <a class="phone navigation__phone" href="tel:+79652493977">+7 965 249-39-77</a>
@@ -37,6 +40,8 @@
             <h3 class="title about__title about__title_small">Ваш личный стилист по волосам</h3>
             <p class="text about__text">Привет! Меня зовут Анна, я парикмахер- универсал. -Я нахожусь в постоянном обучение, повышаю квалификацию, изучаю новые модные тихники. -Владею широким спектором услуг -Индивидуальный подхожу к каждому клиенту</p>
             <img class="about__scissors" src="images/scissors.png">
+            <img src="images/Rectangle%20569.png" alt="" class="border-outer">
+            <img src="images/Rectangle%20570.png" alt="" class="border-inner">
             <div class="attributes about__attributes">
                 <div class="attributes__attribute">
                     <p class="attributes__number">10</p>
@@ -55,9 +60,9 @@
         </section>
         <section id="service" class="service">
             <h2 class="title service__title">Услуги</h2>
-            <p class="text service__text text_size_30px">Помогу создать свой образ и стиль</p>
-            <img class="service__image service__image_margin" src="images/service-bg.png">
-            <img class="service__image" src="images/icons.png">
+            <p class="service__text service__text text_size">Помогу создать свой образ и стиль</p>
+            <img class="service__image service__image_inner" src="images/service-bg.png">
+            <img class="service__image service__image_outer" src="images/icons.png">
             <div class="item service__item1">
                 <p class="item__title">Окрашивание</p>
                 <p class="item__price item__price_padding1">От 2 000 руб.</p>
@@ -84,7 +89,7 @@
             </div>
             <button class="button service__button">ЗАПИСАТЬСЯ НА УСЛУГУ</button>
         </section>
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <h2 class="title portfolio__title">Портфолио</h2>
             <div class="portfolio__container">
                 <div class="gallery portfolio__gallery">
@@ -100,10 +105,30 @@
                 </div>
             </div>
         </section>
-
-        <section class="video">
-            <h2 class="title video__title">Видео которые ответят на ваши вопросы</h2>
-
+        <section class="videos">
+            <h2 id="videos" class="title videos__title">Видео которые ответят на ваши вопросы</h2>
+            <p class="videos__text">Меня часто спрашивают об уходе за блондом, как легко делать укладку дома самой, влияют ли частые стрижки на рост волос?</p>
+            <p class="videos__text">На все эти вопросы я собрала подборку видео котрые помогут вам разобраться и развеят стереотипы.</p>
+            <div class="videos__back-vid">
+                <video class="videos__video">
+                    <source src="">
+                </video>
+                <img class="videos__img" src="images/video2.jpg" alt="">
+                <img class="play" src="images/play.png">
+                <div class="effect"></div>
+            </div>
+            <div class="videos__front-vid">
+                <video class="videos__video">
+                    <source src="">
+                </video>
+                <img class="videos__img" src="images/video1.jpg" alt="">
+                <img class="play" src="images/play.png">
+                <div class="effect"></div>
+            </div>
+            <div class="arrows">
+                <img class="arrows__left" src="images/left.png" alt="">
+                <img class="arrows__right" src="images/right.png" alt="">
+            </div>
         </section>
     </main>
     <section class="application">
@@ -111,16 +136,67 @@
             <h2 class="title application__title title_white">Оставьте заявку</h2>
             <p class="application__text">Менеджер перезвонит Вам в течение 5 минут </p>
             <form action="" class="form application__form">
-                <input class="input" type="text" placeholder="Введите свое имя">
+                <input class="input" type="text" placeholder="Введите свое имя" size="19">
                 <input class="input" type="tel" placeholder="Введите номер телефона">
-                <button class="button">ОТПРАВИТЬ</button>
+                <button class="button" type="submit">ОТПРАВИТЬ</button>
             </form>
             <p class="application__btn-undertext">Отправляя заявку, вы даете согласие<br>на обработку персональных данных</p>
             <div class="clearfix"></div>
         </div>
     </section>
-    <footer class="footer">
+    <footer id="contact" class="footer">
+        <h2 class="title footer__title">Контакты</h2>
 
+        <div class="contacts footer__contacts">
+            <p class="contacts__time">Время работы:<br>
+                9:00 - 19:00
+            </p>
+            <p class="contacts__text">Телефон:<br>
+                <a href="tel:+79101704167" class="phone">+7 910 170-41-67</a>
+            </p>
+            <p class="contacts__text contacts__text_position">Адрес:<br>
+                г.Муром  ул.Льва Толстого 97
+            </p>
+            <p class="contacts__social">
+                <span class="contacts__insta">
+                    <a href="#">
+                        <svg width="18" height="18" viewBox="0 3 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg footer__svg" d="M41.24 9.56004C40.6071 9.56004 39.9884 9.74772 39.4622 10.0993C38.9359 10.451 38.5258 10.9507 38.2836 11.5355C38.0414 12.1202 37.978 12.7636 38.1015 13.3843C38.2249 14.0051 38.5297 14.5753 38.9772 15.0228C39.4248 15.4703 39.995 15.7751 40.6157 15.8986C41.2364 16.022 41.8798 15.9587 42.4646 15.7165C43.0493 15.4743 43.5491 15.0641 43.9007 14.5379C44.2523 14.0116 44.44 13.3929 44.44 12.76C44.44 11.9113 44.1028 11.0974 43.5027 10.4973C42.9026 9.89718 42.0887 9.56004 41.24 9.56004ZM53.5066 16.0134C53.4548 13.8008 53.0404 11.6118 52.28 9.53337C51.6019 7.75506 50.5466 6.14478 49.1866 4.81337C47.8662 3.44651 46.2521 2.39784 44.4666 1.74671C42.3937 0.963136 40.2022 0.539267 37.9866 0.493374C35.16 0.333374 34.2533 0.333374 27 0.333374C19.7466 0.333374 18.84 0.333374 16.0133 0.493374C13.7977 0.539267 11.6062 0.963136 9.53331 1.74671C7.75112 2.40444 6.13847 3.4522 4.81331 4.81337C3.44645 6.13385 2.39778 7.74788 1.74665 9.53337C0.963075 11.6063 0.539206 13.7978 0.493313 16.0134C0.333313 18.84 0.333313 19.7467 0.333313 27C0.333313 34.2534 0.333313 35.16 0.493313 37.9867C0.539206 40.2023 0.963075 42.3938 1.74665 44.4667C2.39778 46.2522 3.44645 47.8662 4.81331 49.1867C6.13847 50.5479 7.75112 51.5956 9.53331 52.2534C11.6062 53.0369 13.7977 53.4608 16.0133 53.5067C18.84 53.6667 19.7466 53.6667 27 53.6667C34.2533 53.6667 35.16 53.6667 37.9866 53.5067C40.2022 53.4608 42.3937 53.0369 44.4666 52.2534C46.2521 51.6022 47.8662 50.5536 49.1866 49.1867C50.5526 47.8603 51.6089 46.2486 52.28 44.4667C53.0404 42.3883 53.4548 40.1992 53.5066 37.9867C53.5066 35.16 53.6666 34.2534 53.6666 27C53.6666 19.7467 53.6666 18.84 53.5066 16.0134ZM48.7066 37.6667C48.6872 39.3594 48.3807 41.0366 47.8 42.6267C47.3742 43.7872 46.6903 44.8358 45.8 45.6934C44.935 46.5747 43.8886 47.2572 42.7333 47.6934C41.1432 48.2741 39.466 48.5806 37.7733 48.6C35.1067 48.7334 34.12 48.76 27.1066 48.76C20.0933 48.76 19.1066 48.76 16.44 48.6C14.6824 48.633 12.9322 48.3623 11.2666 47.8C10.1621 47.3416 9.1636 46.6608 8.33331 45.8C7.44822 44.9434 6.7729 43.8939 6.35998 42.7334C5.70893 41.1204 5.34783 39.4052 5.29331 37.6667C5.29331 35 5.13331 34.0134 5.13331 27C5.13331 19.9867 5.13331 19 5.29331 16.3334C5.30527 14.6029 5.62118 12.8879 6.22665 11.2667C6.69611 10.1411 7.41669 9.1378 8.33331 8.33337C9.14348 7.41649 10.1447 6.6883 11.2666 6.20004C12.8921 5.61349 14.6053 5.30692 16.3333 5.29337C19 5.29337 19.9866 5.13337 27 5.13337C34.0133 5.13337 35 5.13337 37.6666 5.29337C39.3594 5.31279 41.0365 5.61936 42.6266 6.20004C43.8385 6.64978 44.9261 7.38097 45.8 8.33337C46.6739 9.15252 47.3567 10.154 47.8 11.2667C48.3927 12.8905 48.6994 14.6048 48.7066 16.3334C48.84 19 48.8666 19.9867 48.8666 27C48.8666 34.0134 48.84 35 48.7066 37.6667ZM27 13.32C24.2955 13.3253 21.6532 14.1321 19.4071 15.6385C17.1609 17.1449 15.4117 19.2832 14.3803 21.7834C13.349 24.2835 13.0819 27.0333 13.6128 29.6852C14.1436 32.3371 15.4486 34.7721 17.3629 36.6827C19.2771 38.5932 21.7147 39.8934 24.3676 40.4191C27.0205 40.9448 29.7698 40.6723 32.2679 39.6361C34.766 38.6 36.901 36.8465 38.403 34.5975C39.905 32.3484 40.7066 29.7046 40.7066 27C40.7102 25.2003 40.3579 23.4177 39.67 21.7546C38.982 20.0915 37.9721 18.5809 36.6983 17.3095C35.4245 16.0382 33.9118 15.0312 32.2474 14.3465C30.583 13.6619 28.7997 13.313 27 13.32ZM27 35.88C25.2437 35.88 23.5268 35.3592 22.0665 34.3835C20.6062 33.4077 19.468 32.0209 18.7959 30.3983C18.1238 28.7757 17.948 26.9902 18.2906 25.2676C18.6332 23.5451 19.479 21.9628 20.7209 20.7209C21.9628 19.479 23.545 18.6333 25.2676 18.2907C26.9901 17.948 28.7756 18.1239 30.3982 18.796C32.0208 19.4681 33.4077 20.6063 34.3834 22.0666C35.3592 23.5269 35.88 25.2437 35.88 27C35.88 28.1662 35.6503 29.3209 35.204 30.3983C34.7578 31.4756 34.1037 32.4546 33.2791 33.2792C32.4545 34.1037 31.4756 34.7578 30.3982 35.2041C29.3208 35.6504 28.1661 35.88 27 35.88Z" fill="#ffffff"></path>
+                        </svg>
+                    </a>
+                </span>
+                <span>
+                    <a href="viber://chat/?number=%2B79101704167">
+                        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 35" width="24" height="27">
+                            <path d="M 24.425781 3 C 23.0625 3.007813 21.695313 3.089844 20.316406 3.257813 C 17.679688 3.582031 15.066406 4.121094 12.558594 5.273438 C 8.570313 7.105469 5.742188 10.214844 4.921875 14.734375 C 4.574219 16.640625 4.292969 18.574219 4.132813 20.519531 C 3.824219 24.296875 4.015625 28.085938 5.085938 31.808594 C 5.929688 34.742188 7.484375 37.378906 10.207031 39.089844 C 11.359375 39.8125 12.878906 40.164063 13.671875 40.53125 C 13.894531 40.636719 13.949219 40.699219 13.960938 40.714844 C 13.972656 40.726563 14.003906 40.753906 14 40.988281 C 13.972656 43.378906 14 48.003906 14 48.003906 L 14.003906 49 L 15.789063 49 L 16.078125 48.71875 C 16.078125 48.71875 20.613281 44.355469 22.253906 42.558594 C 22.550781 42.238281 22.703125 42.058594 22.734375 42.039063 C 22.761719 42.019531 22.714844 42.007813 23.019531 42 C 25.171875 41.957031 27.320313 41.875 29.46875 41.757813 C 32.300781 41.601563 35.1875 41.332031 37.964844 40.171875 C 40.382813 39.160156 42.402344 37.507813 43.625 35.03125 C 44.875 32.492188 45.542969 29.800781 45.792969 27.015625 C 46.207031 22.378906 46.0625 17.734375 44.78125 13.15625 C 44.027344 10.472656 42.511719 8.203125 40.1875 6.601563 C 37.40625 4.6875 34.269531 3.96875 31.199219 3.511719 C 29.40625 3.246094 27.601563 3.070313 25.789063 3.015625 C 25.335938 3.003906 24.882813 2.996094 24.425781 3 Z M 25.734375 5.015625 C 27.457031 5.0625 29.179688 5.230469 30.90625 5.488281 C 33.867188 5.929688 36.660156 6.601563 39.054688 8.25 C 40.996094 9.585938 42.207031 11.390625 42.855469 13.691406 C 44.050781 17.972656 44.203125 22.359375 43.800781 26.839844 C 43.570313 29.421875 42.957031 31.855469 41.828125 34.148438 C 40.832031 36.171875 39.277344 37.457031 37.191406 38.328125 C 34.769531 39.339844 32.136719 39.609375 29.363281 39.761719 C 27.238281 39.878906 25.109375 39.957031 22.980469 40 C 22.445313 40.011719 21.921875 40.152344 21.550781 40.425781 C 21.179688 40.699219 21.011719 40.953125 20.78125 41.203125 C 19.609375 42.484375 17.273438 44.738281 16 45.972656 C 15.992188 44.480469 15.980469 42.675781 16 41.011719 C 16.007813 40.5 15.890625 39.976563 15.597656 39.5625 C 15.304688 39.148438 14.902344 38.898438 14.515625 38.71875 C 13.386719 38.195313 11.910156 37.796875 11.269531 37.394531 C 9.03125 35.988281 7.761719 33.878906 7.007813 31.253906 C 6.019531 27.820313 5.832031 24.285156 6.125 20.6875 C 6.28125 18.820313 6.550781 16.949219 6.890625 15.09375 C 7.601563 11.183594 9.835938 8.722656 13.390625 7.089844 C 15.636719 6.058594 18.035156 5.550781 20.5625 5.242188 C 22.285156 5.03125 24.007813 4.964844 25.734375 5.015625 Z M 26.15625 10 C 25.332031 10 24.53125 10.09375 23.753906 10.265625 C 23.21875 10.390625 22.878906 10.925781 23 11.464844 C 23.121094 12.003906 23.660156 12.339844 24.199219 12.21875 C 24.828125 12.074219 25.484375 12 26.15625 12 C 31.039063 12 34.976563 15.9375 34.976563 20.816406 C 34.976563 21.492188 34.902344 22.148438 34.757813 22.78125 C 34.636719 23.316406 34.972656 23.855469 35.511719 23.976563 C 36.050781 24.097656 36.585938 23.757813 36.707031 23.21875 C 36.882813 22.445313 36.976563 21.644531 36.976563 20.816406 C 36.976563 14.855469 32.121094 10 26.15625 10 Z M 16.179688 12.003906 C 16.015625 11.996094 15.847656 12.007813 15.671875 12.046875 C 13.855469 12.449219 12.050781 13.765625 12 16.117188 C 12.050781 16.445313 12.046875 16.796875 12.167969 17.09375 C 12.761719 18.546875 13.277344 20.046875 14.019531 21.421875 C 17.632813 28.101563 23.097656 32.746094 30.0625 35.695313 C 30.894531 36.046875 31.753906 36.121094 32.59375 35.769531 C 33.75 35.289063 34.730469 34.546875 35.382813 33.480469 C 36.277344 32.015625 36.289063 31 34.816406 29.917969 C 33.851563 29.207031 32.902344 28.476563 31.925781 27.78125 C 30.4375 26.726563 28.828125 26.542969 27.71875 28.394531 C 27.660156 28.488281 27.574219 28.566406 27.5 28.644531 C 26.929688 29.25 26.230469 29.398438 25.488281 29.09375 C 22.671875 27.933594 20.496094 26.0625 19.183594 23.277344 C 18.410156 21.640625 18.621094 20.820313 20.066406 19.730469 C 20.210938 19.625 20.347656 19.511719 20.480469 19.390625 C 21.113281 18.8125 21.28125 18.125 20.90625 17.347656 C 20.058594 15.574219 18.929688 13.992188 17.5 12.628906 C 17.113281 12.261719 16.671875 12.03125 16.179688 12.003906 Z M 26.140625 13 C 25.699219 13 25.261719 13.035156 24.832031 13.109375 C 24.46875 13.15625 24.160156 13.398438 24.027344 13.738281 C 23.894531 14.082031 23.960938 14.46875 24.195313 14.75 C 24.433594 15.027344 24.808594 15.15625 25.167969 15.078125 C 25.480469 15.027344 25.808594 15 26.140625 15 C 29.390625 15 32 17.609375 32 20.859375 C 32 21.191406 31.972656 21.519531 31.921875 21.832031 C 31.84375 22.191406 31.972656 22.566406 32.25 22.804688 C 32.53125 23.039063 32.917969 23.105469 33.261719 22.972656 C 33.601563 22.839844 33.84375 22.53125 33.890625 22.167969 C 33.964844 21.738281 34 21.300781 34 20.859375 C 34 16.53125 30.46875 13 26.140625 13 Z M 26 16 C 25.640625 15.996094 25.304688 16.183594 25.121094 16.496094 C 24.941406 16.808594 24.941406 17.191406 25.121094 17.503906 C 25.304688 17.816406 25.640625 18.003906 26 18 C 27.667969 18 29 19.332031 29 21 C 28.996094 21.359375 29.183594 21.695313 29.496094 21.878906 C 29.808594 22.058594 30.191406 22.058594 30.503906 21.878906 C 30.816406 21.695313 31.003906 21.359375 31 21 C 31 18.25 28.75 16 26 16 Z"/>
+                        </svg>
+                    </a>
+                </span>
+            </p>
+        </div>
+        <div id="map" class="map footer__map"></div>
+        <div class="clearfix"></div>
+        <div class="bottom">
+            <p class="logo bottom__end-position"><svg width="157" height="45" viewBox="0 0 157 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="157" height="45" fill="url(#pattern0)"/>
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0" transform="scale(0.00636943 0.0222222)"/>
+                    </pattern>
+                    <image id="image0" width="157" height="45" xlink:href="data:image/png;base64,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"/>
+                </defs>
+            </svg>
+            </p>
+            <p class="bottom__text">Политика конфиденциальности</p>
+            <a class="to-top bottom__text bottom__end-position" href="#header">
+                <span>
+                    <svg width="8" height="21" viewBox="0 0 8 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.35355 0.646391C4.15829 0.45113 3.84171 0.45113 3.64645 0.646391L0.464466 3.82837C0.269204 4.02363 0.269204 4.34022 0.464466 4.53548C0.659728 4.73074 0.976311 4.73074 1.17157 4.53548L4 1.70705L6.82843 4.53548C7.02369 4.73074 7.34027 4.73074 7.53553 4.53548C7.7308 4.34022 7.7308 4.02363 7.53553 3.82837L4.35355 0.646391ZM4.5 20.0168L4.5 0.999945H3.5L3.5 20.0168H4.5Z" fill="#EFEFEF"/>
+                    </svg>
+                </span>
+                Наверх
+            </a>
+        </div>
     </footer>
 </body>
 </html>
