@@ -8,7 +8,6 @@
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-    <script src="js/map.js"></script>
 </head>
 <body class="page">
     <header id="header" class="header">
@@ -23,14 +22,19 @@
                 </defs>
             </svg>
             </a>
-            <ul class="nav-list navigation__list">
-                <li><a class="nav-list__li" href="#about">Обо мне</a></li>
-                <li><a class="nav-list__li" href="#service">Услуги</a></li>
-                <li><a class="nav-list__li" href="#portfolio">Портфолио</a></li>
-                <li><a class="nav-list__li" href="#videos">Видео</a></li>
-                <li><a class="nav-list__li" href="#contact">Контакты</a></li>
+            <ul class="nav-list navigation__nav-list">
+                <li class="nav-list__li"><a class="nav-list__a" href="#about">Обо мне</a></li>
+                <li class="nav-list__li"><a class="nav-list__a" href="#service">Услуги</a></li>
+                <li class="nav-list__li"><a class="nav-list__a" href="#portfolio">Портфолио</a></li>
+                <li class="nav-list__li"><a class="nav-list__a" href="#videos">Видео</a></li>
+                <li class="nav-list__li"><a class="nav-list__a" href="#contact">Контакты</a></li>
             </ul>
-            <a class="phone navigation__phone" href="tel:+79652493977">+7 965 249-39-77</a>
+            <span class="navigation__phone"><a class="phone phone_color" href="tel:+79652493977">+7 965 249-39-77</a></span>
+            <button class="burger" id="burger">
+                <span class="burger__upper-bar"></span>
+                <span class="burger__middle-bar"></span>
+                <span class="burger__lower-bar"></span>
+            </button>
         </nav>
         <p class="header__title">Позволь себе стать<br>привлекательнее</p>
         <button class="button header__button">УЗНАТЬ ПОДРОБНЕЕ</button>
@@ -109,25 +113,23 @@
             <h2 id="videos" class="title videos__title">Видео которые ответят на ваши вопросы</h2>
             <p class="videos__text">Меня часто спрашивают об уходе за блондом, как легко делать укладку дома самой, влияют ли частые стрижки на рост волос?</p>
             <p class="videos__text">На все эти вопросы я собрала подборку видео котрые помогут вам разобраться и развеят стереотипы.</p>
-            <div class="videos__back-vid">
-                <video class="videos__video">
-                    <source src="">
-                </video>
-                <img class="videos__img" src="images/video2.jpg" alt="">
-                <img class="play" src="images/play.png">
-                <div class="effect"></div>
+
+            <div class="back-vid">
+                    <iframe class="video" src="https://www.youtube.com/embed/maZTEwleEvs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <img class="video-cover" src="images/video2.jpg" alt="">
+                    <img class="play" src="images/play.png" alt="">
+                    <div class="effect"></div>
             </div>
-            <div class="videos__front-vid">
-                <video class="videos__video">
-                    <source src="">
-                </video>
-                <img class="videos__img" src="images/video1.jpg" alt="">
-                <img class="play" src="images/play.png">
-                <div class="effect"></div>
+
+            <div class="front-vid" onclick="frontVid(this)">
+                    <iframe class="video" src="https://www.youtube.com/embed/7BAko6LHSUQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <img class="video-cover" src="images/video1.jpg" alt="">
+                    <img class="play" src="images/play.png" alt="">
+                    <div class="effect"></div>
             </div>
             <div class="arrows">
-                <img class="arrows__left" src="images/left.png" alt="">
-                <img class="arrows__right" src="images/right.png" alt="">
+                <img class="arrows__left" src="images/left.png" alt="" onclick="previousVid()">
+                <img class="arrows__right" src="images/right.png" alt="" onclick="nextVid()">
             </div>
         </section>
     </main>
@@ -135,18 +137,16 @@
         <div class="application__main">
             <h2 class="title application__title title_white">Оставьте заявку</h2>
             <p class="application__text">Менеджер перезвонит Вам в течение 5 минут </p>
-            <form action="" class="form application__form">
+            <form class="form application__form" action="mailto:luka.kostadinovic32@gmail.com" method="post" enctype="text/plain">
                 <input class="input" type="text" placeholder="Введите свое имя" size="19">
                 <input class="input" type="tel" placeholder="Введите номер телефона">
-                <button class="button" type="submit">ОТПРАВИТЬ</button>
+                <button class="button application__button" type="submit">ОТПРАВИТЬ</button>
             </form>
             <p class="application__btn-undertext">Отправляя заявку, вы даете согласие<br>на обработку персональных данных</p>
-            <div class="clearfix"></div>
         </div>
     </section>
     <footer id="contact" class="footer">
         <h2 class="title footer__title">Контакты</h2>
-
         <div class="contacts footer__contacts">
             <p class="contacts__time">Время работы:<br>
                 9:00 - 19:00
@@ -198,5 +198,8 @@
             </a>
         </div>
     </footer>
+    <script src="js/map.js"></script>
+    <script src="js/burger-menu.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
