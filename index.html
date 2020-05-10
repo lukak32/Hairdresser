@@ -10,91 +10,103 @@
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 </head>
 <body class="page">
+    <nav class="navigation">
+        <a class="logo navigation__logo">
+            <svg class="logo__img" width="157" height="45" viewBox="0 0 157 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="157" height="45" fill="url(#pattern0)"/>
+            <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0" transform="scale(0.00636943 0.0222222)"/>
+                </pattern>
+                <image id="image0" width="157" height="45" xlink:href="data:image/png;base64,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"/>
+            </defs>
+        </svg>
+        </a>
+        <ul class="nav-list navigation__nav-list">
+            <li class="nav-list__li"><a class="nav-list__a" href="#about">Обо мне</a></li>
+            <li class="nav-list__li"><a class="nav-list__a" href="#service">Услуги</a></li>
+            <li class="nav-list__li"><a class="nav-list__a" href="#portfolio">Портфолио</a></li>
+            <li class="nav-list__li"><a class="nav-list__a" href="#videos">Видео</a></li>
+            <li class="nav-list__li"><a class="nav-list__a" href="#contact">Контакты</a></li>
+        </ul>
+        <span class="navigation__phone"><a class="phone phone_color" href="tel:+79652493977">+7 965 249-39-77</a></span>
+        <button class="burger" id="burger">
+            <span class="burger__upper-bar"></span>
+            <span class="burger__middle-bar"></span>
+            <span class="burger__lower-bar"></span>
+        </button>
+    </nav>
     <header id="header" class="header">
-        <nav class="navigation header__navigation">
-            <a class="logo navigation__logo"><svg width="157" height="45" viewBox="0 0 157 45" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="157" height="45" fill="url(#pattern0)"/>
-                <defs>
-                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0" transform="scale(0.00636943 0.0222222)"/>
-                    </pattern>
-                    <image id="image0" width="157" height="45" xlink:href="data:image/png;base64,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"/>
-                </defs>
-            </svg>
-            </a>
-            <ul class="nav-list navigation__nav-list">
-                <li class="nav-list__li"><a class="nav-list__a" href="#about">Обо мне</a></li>
-                <li class="nav-list__li"><a class="nav-list__a" href="#service">Услуги</a></li>
-                <li class="nav-list__li"><a class="nav-list__a" href="#portfolio">Портфолио</a></li>
-                <li class="nav-list__li"><a class="nav-list__a" href="#videos">Видео</a></li>
-                <li class="nav-list__li"><a class="nav-list__a" href="#contact">Контакты</a></li>
-            </ul>
-            <span class="navigation__phone"><a class="phone phone_color" href="tel:+79652493977">+7 965 249-39-77</a></span>
-            <button class="burger" id="burger">
-                <span class="burger__upper-bar"></span>
-                <span class="burger__middle-bar"></span>
-                <span class="burger__lower-bar"></span>
-            </button>
-        </nav>
         <p class="header__title">Позволь себе стать<br>привлекательнее</p>
-        <button class="button header__button">УЗНАТЬ ПОДРОБНЕЕ</button>
+        <button class="button header__button"><a href="#service">УЗНАТЬ ПОДРОБНЕЕ</a></button>
     </header>
     <main class="main">
         <section id="about" class="about">
             <h3 class="title about__title about__title_small">Ваш личный стилист по волосам</h3>
             <p class="text about__text">Привет! Меня зовут Анна, я парикмахер-универсал.<br>-Я нахожусь в постоянном обучение, повышаю квалификацию, изучаю новые модные тихники.<br>-Владею широким спектором услуг<br>-Индивидуальный подхожу к каждому клиенту</p>
-            <img class="about__scissors" src="images/scissors.png">
-            <img src="images/border-outer.png" alt="" class="border-outer">
-            <img src="images/border-inner.png" alt="" class="border-inner">
-            <div class="attributes about__attributes">
-                <div class="attributes__attribute">
-                    <p class="attributes__number">10</p>
-                    <p class="attributes__letter">лет стажа</p>
-                </div>
-                <div class="attributes__attribute">
-                    <p class="attributes__number">30</p>
-                    <p class="attributes__letter">минут среднее время стрижки</p>
-                </div>
-                <div class="attributes__attribute">
-                    <p class="attributes__number">540</p>
-                    <p class="attributes__letter">довольных клиентов</p>
+            <img class="about__anna" src="images/anna.jpg">
+            <div class="description about__description">
+                <img class="description__scissors" src="images/scissors.png">
+                <img src="images/border-outer.png" alt="" class="description__border-outer">
+                <img src="images/border-inner.png" alt="" class="description__border-inner">
+                <div class="attributes description__attributes">
+                    <div class="attributes__attribute">
+                        <p class="attributes__number">10</p>
+                        <p class="attributes__letter">лет стажа</p>
+                    </div>
+                    <div class="attributes__attribute">
+                        <p class="attributes__number">30</p>
+                        <p class="attributes__letter">минут среднее время стрижки</p>
+                    </div>
+                    <div class="attributes__attribute">
+                        <p class="attributes__number attributes__number_short">540</p>
+                        <p class="attributes__letter">довольных клиентов</p>
+                    </div>
                 </div>
             </div>
-            <img class="about__anna" src="images/anna.jpg">
+
         </section>
         <section id="service" class="service">
-            <h2 class="title service__title">Услуги</h2>
+            <h2 class="title service__title title_small">Услуги</h2>
             <p class="service__text service__text text_size">Помогу создать свой образ и стиль</p>
-            <img class="service__image service__image_inner" src="images/service-bg.png">
-            <img class="service__image service__image_outer" src="images/icons.png">
-            <div class="item service__item1">
-                <p class="item__title">Окрашивание</p>
-                <p class="item__price item__price_padding1">От 2 000 руб.</p>
+            <div class="price-list service__price-list">
+                <img class="price-list__image price-list__image_inner" src="images/service-bg.png">
+                <img class="price-list__image price-list__image_outer" src="images/icons.png">
+                <div class="item price-list__item1">
+                    <img src="images/1.jpg" class="item__img">
+                    <p class="item__title">Окрашивание</p>
+                    <p class="item__price item__price_padding1">От 2 000 руб.</p>
+                </div>
+                <div class="item price-list__item2">
+                    <img src="images/2.jpg" class="item__img">
+                    <p class="item__title">Стрижки женские</p>
+                    <p class="item__price item__price_padding2">От 400 руб.</p>
+                </div>
+                <div class="item price-list__item3">
+                    <img src="images/3.jpg" class="item__img">
+                    <p class="item__title">Стрижки мужские</p>
+                    <p class="item__price item__price_padding3">От 300 руб.</p>
+                </div>
+                <div class="item price-list__item4">
+                    <img src="images/4.jpg" class="item__img">
+                    <p class="item__title">Уходовые процедуры</p>
+                    <p class="item__price item__price_padding4">От 1 500 руб.</p>
+                </div>
+                <div class="item price-list__item5">
+                    <img src="images/5.jpg" class="item__img">
+                    <p class="item__title">Прически</p>
+                    <p class="item__price item__price_padding5">1000-2000 руб.</p>
+                </div>
+                <div class="item price-list__item6">
+                    <img src="images/6.jpg" class="item__img">
+                    <p class="item__title">Укладки</p>
+                    <p class="item__price item__price_padding6">400-800 руб.</p>
+                </div>
             </div>
-            <div class="item service__item2">
-                <p class="item__title">Стрижки женские</p>
-                <p class="item__price item__price_padding2">От 400 руб.</p>
-            </div>
-            <div class="item service__item3">
-                <p class="item__title">Стрижки мужские</p>
-                <p class="item__price item__price_padding3">От 300 руб.</p>
-            </div>
-            <div class="item service__item4">
-                <p class="item__title">Уходовые процедуры</p>
-                <p class="item__price item__price_padding4">От 1 500 руб.</p>
-            </div>
-            <div class="item service__item5">
-                <p class="item__title">Прически</p>
-                <p class="item__price item__price_padding5">1000-2000 руб.</p>
-            </div>
-            <div class="item service__item6">
-                <p class="item__title">Укладки</p>
-                <p class="item__price item__price_padding6">400-800 руб.</p>
-            </div>
-            <button class="button service__button">ЗАПИСАТЬСЯ НА УСЛУГУ</button>
+            <button class="button service__button"><a href="#application">ЗАПИСАТЬСЯ НА УСЛУГУ</a></button>
         </section>
         <section id="portfolio" class="portfolio">
-            <h2 class="title portfolio__title">Портфолио</h2>
+            <h2 class="title portfolio__title title_small">Портфолио</h2>
             <div class="portfolio__container">
                 <div class="gallery portfolio__gallery">
                     <img class="gallery__hair gallery__hair_item1" src="images/hair1.jpg" alt="">
@@ -110,32 +122,48 @@
             </div>
         </section>
         <section class="videos">
-            <h2 id="videos" class="title videos__title">Видео которые ответят на ваши вопросы</h2>
+            <h2 id="videos" class="title videos__title title_small">Видео которые ответят на ваши вопросы</h2>
             <p class="videos__text">Меня часто спрашивают об уходе за блондом, как легко делать укладку дома самой, влияют ли частые стрижки на рост волос?</p>
             <p class="videos__text">На все эти вопросы я собрала подборку видео котрые помогут вам разобраться и развеят стереотипы.</p>
-
             <div class="back-vid">
-                    <iframe class="video" src="https://www.youtube.com/embed/maZTEwleEvs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/7BAko6LHSUQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <img class="video-cover" src="images/video2.jpg" alt="">
                     <img class="play" src="images/play.png" alt="">
                     <div class="effect"></div>
             </div>
-
-            <div class="front-vid" onclick="frontVid(this)">
-                    <iframe class="video" src="https://www.youtube.com/embed/7BAko6LHSUQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="front-vid">
+                    <iframe class="video" src="https://www.youtube.com/embed/maZTEwleEvs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <img class="video-cover" src="images/video1.jpg" alt="">
                     <img class="play" src="images/play.png" alt="">
                     <div class="effect"></div>
             </div>
             <div class="arrows">
-                <img class="arrows__left" src="images/left.png" alt="" onclick="previousVid()">
-                <img class="arrows__right" src="images/right.png" alt="" onclick="nextVid()">
+                <svg class="arrows__left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="43px" height="8px" viewBox="0 0 43 8" enable-background="new 0 0 43 8" xml:space="preserve">
+                    <image id="image0" width="43" height="8" x="0" y="0" xlink:href="data:image/png;base64,
+                        iVBORw0KGgoAAAANSUhEUgAAACsAAAAICAQAAADKbM7TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                        AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
+                        cwAACxMAAAsTAQCanBgAAAAHdElNRQfkBBkOMBK/8SdQAAAAMUlEQVQoz2NggAADhngGqgMDhvsM
+                        BkPAUEYGA4b9DAcYLlLXWCZqe52mgUBzg6mawABgdQieO/IF2QAAACV0RVh0ZGF0ZTpjcmVhdGUA
+                        MjAyMC0wNC0yNVQxNDo0ODoxOCswMzowMFjZf0AAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMDQt
+                        MjVUMTQ6NDg6MTgrMDM6MDAphMf8AAAAAElFTkSuQmCC"
+                    />
+                </svg>
+                <svg class="arrows__right" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="43px" height="8px" viewBox="0 0 43 8" enable-background="new 0 0 43 8" xml:space="preserve">
+                    <image id="image0" width="43" height="8" x="0" y="0" xlink:href="data:image/png;base64,
+                        iVBORw0KGgoAAAANSUhEUgAAACsAAAAICAQAAADKbM7TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                        AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
+                        cwAACxMAAAsTAQCanBgAAAAHdElNRQfkBBkPDygg4b7pAAAAPElEQVQoz2NmoCZIYGBgeEFVExkY
+                        GBgYDBjuMxhQ31i4wYwMDVQ2WJ/BgcGRiRZOplkgDAFDGRgSYIYCAP4TCAur9RNhAAAAJXRFWHRk
+                        YXRlOmNyZWF0ZQAyMDIwLTA0LTI1VDE1OjE1OjQwKzAzOjAweunBNAAAACV0RVh0ZGF0ZTptb2Rp
+                        ZnkAMjAyMC0wNC0yNVQxNToxNTo0MCswMzowMAu0eYgAAAAASUVORK5CYII="
+                    />
+                </svg>
             </div>
         </section>
     </main>
-    <section class="application">
+    <section class="application" id="application">
         <div class="application__main">
-            <h2 class="title application__title title_white">Оставьте заявку</h2>
+            <h2 class="title application__title title_white title_small">Оставьте заявку</h2>
             <p class="application__text">Менеджер перезвонит Вам в течение 5 минут </p>
             <form class="form application__form" action="mailto:luka.kostadinovic32@gmail.com" method="post" enctype="text/plain">
                 <input class="input" type="text" placeholder="Введите свое имя" size="19">
@@ -146,7 +174,7 @@
         </div>
     </section>
     <footer id="contact" class="footer">
-        <h2 class="title footer__title">Контакты</h2>
+        <h2 class="title footer__title title_small">Контакты</h2>
         <div class="contacts footer__contacts">
             <p class="contacts__time">Время работы:<br>
                 9:00 - 19:00
